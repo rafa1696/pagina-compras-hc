@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquidação Black Friday</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="topo">
+        <nav class="topo__navbar">
+            <ul>
+                <li>Loja de Games</li>
+            </ul>
+        </nav>
+    </header>
+    <main class="principal">
+        <section class="principal__secao">
+            <div class="principal__secao___texto" id="divFoto">
+                <h1>Escolha o que deseja no painel da direita</h1>
+            </div>
+            <div class="principal__secao___form">
+                <div class="principal__secao___form-container">
+                    <form onload="limpaInput();" class="principal__secao___form-principal">
+                        <fieldset>
+                            <div>
+                                <select onchange="trocaFoto()" name="jogo" id="jogo">
+                                    <option value="escolha" disabled hidden selected>---Escolha um jogo---</option>
+                                    <option value="zelda">Zelda: Breath of The Wild</option>
+                                    <option value="forza">Forza Horizon 4</option>
+                                    <option value="cod">Call of Duty: Modern Warfare</option>
+                                    <option value="ow">Overwatch</option>
+                                </select>
+                            </div>
+                            <div>
+                                <input placeholder="Digite seu nome" name="nome" type="text" id="nome" class="input"
+                                    required>
+
+                            </div>
+                            <div>
+                                <input placeholder="Digite seu e-mail" name="email" type="email" id="email"
+                                    class="input" required>
+
+                            </div>
+                            <div>
+                                <input class="input" placeholder="Digite seu CEP" name="cep" type="text" id="cep"
+                                    value="" size="10" maxlength="9" onblur="pesquisacep(this.value);" />
+
+
+                            </div>
+                            <div>
+                                <input readonly placeholder="Rua" class="input" name="rua" type="text" id="rua" size="60" />
+
+                            </div>
+                            <div>
+                                <input readonly placeholder="Bairro" class="input" name="bairro" type="text" id="bairro"
+                                    size="40" />
+
+                            </div>
+                            <div>
+                                <input readonly placeholder="Cidade" class="input" name="cidade" type="text" id="cidade"
+                                    size="40" />
+
+                            </div>
+                            <div>
+                                <input readonly placeholder="UF" class="input" name="uf" type="text" id="uf" size="2" />
+
+                            </div>
+                            <div>
+                                <button class="input" value="submit" type="button" onclick="validar()">Enviar compra</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="principal__rodape">
+        <p>&copy;Rafael Ferreira</p>
+    </footer>
+    <script src="/js/checagem.js"></script>
+    <script src="/js/mostraFoto.js"></script>
+</body>
+
+</html>
